@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowStateListener;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -14,6 +15,8 @@ import DisplayGames.GameButtons;
 import GamesTracker.MainListsPanel;
 import Menu.MainMenuBar;
 import Menu.PlatformsMenu;
+
+import static GamesTracker.Lists.lists;
 
 public class MainFrame extends JFrame {
 
@@ -47,6 +50,10 @@ public class MainFrame extends JFrame {
 
         // adding side panel
         //JPanel sidePanelContainer = new JPanel();
+        // add default lists
+        lists.put("Played", new ArrayList<>());
+        lists.put("Currently playing", new ArrayList<>());
+        lists.put("Want to play", new ArrayList<>());
         this.mainListsPanel = new MainListsPanel();
         this.add(mainListsPanel,BorderLayout.WEST);
         this.pack();
