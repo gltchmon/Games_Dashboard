@@ -14,7 +14,7 @@ public class DisplayGamesPanel extends JPanel {
 
 
     public  DisplayGamesPanel(){
-        this.setLayout(new GridLayout(20,5,5,5));
+        this.setLayout(new GridLayout(25,4,5,5));
         this.setBorder(new EmptyBorder(10,10,10,10));
         this.setBackground(Color.white);
         PlatformsMenu platformsMenu = new PlatformsMenu();

@@ -11,6 +11,7 @@ import java.util.TreeMap;
 
 import DisplayGames.DisplayGamesPanel;
 import DisplayGames.GameButtons;
+import GamesTracker.MainListsPanel;
 import Menu.MainMenuBar;
 import Menu.PlatformsMenu;
 
@@ -19,6 +20,8 @@ public class MainFrame extends JFrame {
     private JMenuBar menuBar;
     public DisplayGamesPanel mainGamePanel;
     public  JLabel gamesTitle;
+
+    public MainListsPanel mainListsPanel;
 
     // adding all JPanels to the main frame
     public MainFrame() {
@@ -41,6 +44,11 @@ public class MainFrame extends JFrame {
         gamesTitle.setName("gamesTitle");
         this.add(gamesTitle, BorderLayout.NORTH);
         this.add(scrollPane, BorderLayout.CENTER);
+
+        // adding side panel
+        //JPanel sidePanelContainer = new JPanel();
+        this.mainListsPanel = new MainListsPanel();
+        this.add(mainListsPanel,BorderLayout.WEST);
         this.pack();
         this.setVisible(true);
     }
