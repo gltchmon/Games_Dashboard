@@ -24,6 +24,7 @@ import java.util.ArrayList;
 
 import static GamesTracker.Lists.getCurrentLists;
 import static GamesTracker.Lists.lists;
+import static HelperMethods.HelperMethods.hasKey;
 
 
 // class to display modal when button is pressed to diplsya information about the game
@@ -128,10 +129,7 @@ public class GameInfoModal {
 
     }
 
-    // check if object has key
-    private boolean hasKey(JSONObject obj , String key){
-        return obj.has(key);
-    }
+
 
 
     // get game cover image
@@ -144,7 +142,7 @@ public class GameInfoModal {
             conn.connect();
             InputStream urlStream = conn.getInputStream();
             image = ImageIO.read(urlStream);
-            image = image.getScaledInstance(150,250,Image.SCALE_DEFAULT);
+            image = image.getScaledInstance(150,150,Image.SCALE_DEFAULT);
             gameImg = new ImageIcon(image);
         } catch (IOException e){
             e.printStackTrace();

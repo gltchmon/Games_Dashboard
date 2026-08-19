@@ -76,4 +76,14 @@ public class MainFrame extends JFrame {
             }
         }
     }
+
+    public void changeMainGamesPanel(ArrayList<Integer> gameIds){
+        try{
+            this.mainGamePanel.displayList(gameIds);
+        } catch (IOException  | InterruptedException e) {
+            System.err.println("Something wrong has happened with getting the IDS");
+            System.out.println(e.getMessage());
+        }
+
+    }
 }

@@ -1,5 +1,7 @@
 package HelperMethods;
 
+import org.json.JSONObject;
+
 public class HelperMethods {
 
 
@@ -14,5 +16,9 @@ public class HelperMethods {
         int nameEndIndex = val.indexOf(",\n" +
                 "    \"name\"");
         return val.substring(nameStartIndex, nameEndIndex);
+    }
+
+    public static boolean hasKey(JSONObject obj , String key){
+        return obj.has(key);
     }
 }
