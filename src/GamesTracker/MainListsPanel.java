@@ -60,6 +60,7 @@ public class MainListsPanel extends JPanel implements ActionListener, MouseListe
         button.setAlignmentX(JComponent.CENTER_ALIGNMENT);
         button.setMaximumSize(new Dimension(180,40));
         button.addActionListener(this);
+        button.setBackground(Color.white);
         this.add(button);
     }
 
