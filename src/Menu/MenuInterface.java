@@ -13,6 +13,7 @@ import java.util.TreeMap;
 // interface was used because the menu item implementations will all follow the same structure and contain the same methods as they perform
 // the same functionality but in different ways
 
+// interface for each menu option
 public interface MenuInterface {
     final GamesWrapper gw = new GamesWrapper();
 
@@ -23,6 +24,7 @@ public interface MenuInterface {
     // method to return results when menu a specific item has been clicked
     TreeMap<Integer,String> returnResults(String field, String value) throws IOException, InterruptedException;
 
+    // create the map that olds the games for each menu item option
     default TreeMap<Integer,String> createMap(JSONArray arr){
         TreeMap<Integer, String> result = new TreeMap<>();
         for (int i = 0; i < arr.length(); i++) {

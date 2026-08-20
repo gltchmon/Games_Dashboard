@@ -5,12 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-// making a button for every result returned from the menu items or countries in a list
+// making a button for every game returned from selecting the menu option or searching a game
 public class GameButtons extends JButton implements ActionListener {
 
     private Integer gameId;
     private String gameName;
-
     public GameButtons(Integer id, String gameName){
         this.gameName = gameName;
         this.gameId = id;

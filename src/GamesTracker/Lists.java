@@ -12,7 +12,9 @@ public class Lists {
     public static TreeMap<String, ArrayList<Integer>> lists = new TreeMap<>();
 
     public static void addToList(String list, Integer gameId){
-        lists.get(list).add(gameId);
+        if(!lists.get(list).contains(gameId)){
+            lists.get(list).add(gameId);
+        }
     }
 
     // used for combo box and making buttons

@@ -18,6 +18,7 @@ import Menu.PlatformsMenu;
 
 import static GamesTracker.Lists.lists;
 
+// main frame contains the main panels: menu, side bar for lists , panel for display
 public class MainFrame extends JFrame {
 
     private JMenuBar menuBar;
@@ -45,6 +46,7 @@ public class MainFrame extends JFrame {
         JScrollPane scrollPane = new JScrollPane(this.mainGamePanel);
         this.gamesTitle = new JLabel("Games: Nintendo Switch");
         gamesTitle.setName("gamesTitle");
+        gamesTitle.setAlignmentX(JComponent.CENTER_ALIGNMENT);
         this.add(gamesTitle, BorderLayout.NORTH);
         this.add(scrollPane, BorderLayout.CENTER);
 
@@ -77,9 +79,9 @@ public class MainFrame extends JFrame {
         }
     }
 
-    public void changeMainGamesPanel(ArrayList<Integer> gameIds){
+    public void changeMainGamesPanel(String listName, ArrayList<Integer> gameIds){
         try{
-            this.mainGamePanel.displayList(gameIds);
+            this.mainGamePanel.displayList(listName,gameIds);
         } catch (IOException  | InterruptedException e) {
             System.err.println("Something wrong has happened with getting the IDS");
             System.out.println(e.getMessage());

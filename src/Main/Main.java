@@ -3,7 +3,7 @@ package Main;
 import javax.swing.*;
 
 public class Main {
-
+    // main class to start application
     public static MainFrame frame = new MainFrame();
 
     // main function as main entry point of program introduced in unit 1

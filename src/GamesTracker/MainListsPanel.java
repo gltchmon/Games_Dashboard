@@ -48,6 +48,7 @@ public class MainListsPanel extends JPanel implements ActionListener, MouseListe
             button.setAlignmentX(JComponent.CENTER_ALIGNMENT);
             button.setMaximumSize(new Dimension(180,40));
             button.addActionListener(this);
+            button.setBackground(Color.white);
             this.add(button);
         }
     }
@@ -84,7 +85,7 @@ public class MainListsPanel extends JPanel implements ActionListener, MouseListe
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton buttonClicked = (JButton) e.getSource();
-        Main.frame.changeMainGamesPanel(lists.get(buttonClicked.getName()));
+        Main.frame.changeMainGamesPanel(buttonClicked.getName(),lists.get(buttonClicked.getName()));
     }
 
     // add or remove lists

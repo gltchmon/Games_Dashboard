@@ -27,7 +27,7 @@ import static GamesTracker.Lists.lists;
 import static HelperMethods.HelperMethods.hasKey;
 
 
-// class to display modal when button is pressed to diplsya information about the game
+// class to display modal when button is pressed to display information about the game
 public class GameInfoModal {
 
     private Integer gameId;
@@ -62,7 +62,7 @@ public class GameInfoModal {
         addToList(option);
     }
 
-    // get the information on the selected game and store the information in the variables
+    // get the information on the selected game and store the information to be displayed
     private void getGame() throws IOException, InterruptedException {
         String gameRequestResult = gw.getGameById(String.valueOf(this.gameId));
         JSONArray jsonArr = new JSONArray(gameRequestResult);
@@ -218,11 +218,11 @@ public class GameInfoModal {
         return res;
     }
 
+    // add game to specified list
     private void addToList(int option){
         if(option == 0){
             String list = comboBoxlists.getSelectedItem().toString();
             Lists.addToList(list,gameId);
-
         }
     }
 
